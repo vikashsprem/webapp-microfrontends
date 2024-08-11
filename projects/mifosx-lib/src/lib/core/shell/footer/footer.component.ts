@@ -5,11 +5,11 @@ import { AlertService } from '@mifosx-lib/core/alert/alert.service';
 import { AuthenticationService } from '@mifosx-lib/core/authentication/authentication.service';
 import { Dates } from '@mifosx-lib/core/utils/dates';
 import { SettingsService } from '@mifosx-lib/settings/settings.service';
-import { MifosxLibService } from '../../public-api';
+import { MifosxLibService } from '../../../../public-api';
 import { GlobalConfigurationService } from '@fineract-lib';
 import { BusinessDateManagementService } from '@fineract-lib';
 /** Environment Configuration */
-import { environment } from '../../environments/environment';
+import { environment } from '../../../../environments/environment';
 import { Subscription } from 'rxjs';
 
 /**
