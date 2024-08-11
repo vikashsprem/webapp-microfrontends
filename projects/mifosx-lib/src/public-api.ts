@@ -6,7 +6,6 @@
 //**************/ Exporting all the modules /****************//
 
 export * from './lib/mifosx-lib.service';
-export * from './lib/mifosx-lib.component';
 export * from './lib/mifosx-lib.module';
 export * from './lib/icons.module';
 export * from './lib/pipes/pipes.module';
@@ -36,19 +35,19 @@ export * from './lib/entity-name/entity-name.component';
 export * from './lib/external-identifier/external-identifier.component';
 export * from './lib/file-upload/file-upload.component';
 export * from './lib/keyboard-shortcuts-dialog/keyboard-shortcuts-dialog.component';
-export * from './lib/language-selector/language-selector.component';
-export * from './lib/search-tool/search-tool.component';
+export * from './lib/core/shell/language-selector/language-selector.component';
+export * from './lib/core/shell/search-tool/search-tool.component';
 export * from './lib/server-selector/server-selector.component';
 export * from './lib/steppers/stepper-buttons/stepper-buttons.component';
 export * from './lib/svg-icon/svg-icon.component';
 export * from './lib/tenant-selector/tenant-selector.component';
 export * from './lib/theme-picker/theme-picker.component';
-export * from './lib/theme-toggle/theme-toggle.component';
+export * from './lib/core/shell/theme-toggle/theme-toggle.component';
 export * from './lib/transaction-payment-detail/transaction-payment-detail.component';
 export * from './lib/notifications-tray/notifications-tray.component';
 export * from './lib/form-dialog/formfield/formfield.component';
 export * from './lib/form-dialog/form-dialog.component';
-export * from './lib/footer/footer.component'
+export * from './lib/core/shell/footer/footer.component'
 export * from './lib/configuration-wizard/completion-dialog/completion-dialog.component'
 export * from './lib/configuration-wizard/continue-setup-dialog/continue-setup-dialog.component'
 export * from './lib/configuration-wizard/next-step-dialog/next-step-dialog.component'

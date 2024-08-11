@@ -7,6 +7,7 @@
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": false,
     "noImplicitReturns": true,
+    "emitDecoratorMetadata": true,
     "paths": {
       "@mifosx-lib/*": [
         "projects/mifosx-lib/src/lib/*"

@@ -30,7 +30,6 @@ import { KeyboardShortcutsConfiguration } from './keyboards-shortcut-config';
 import { Dates } from '@mifosx-lib/core/utils/dates';
 import { animate, style, transition, trigger } from '@angular/animations';
 import { I18nService } from '@mifosx-lib/core/i18n/i18n.service';
-import { ThemingService } from '@mifosx-lib/theme-toggle/theming.service';
 
 /** Initialize Logger */
 const log = new Logger('MifosX');
@@ -48,6 +47,7 @@ import localeLV from '@angular/common/locales/lv';
 import localeNE from '@angular/common/locales/ne';
 import localePT from '@angular/common/locales/pt';
 import localeSW from '@angular/common/locales/sw';
+import { ThemingService } from '@mifosx-lib/core/shell/theme-toggle/theming.service';
 registerLocaleData(localeCS);
 registerLocaleData(localeEN);
 registerLocaleData(localeES);

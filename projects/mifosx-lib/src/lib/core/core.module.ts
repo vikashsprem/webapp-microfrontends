@@ -25,15 +25,20 @@ import { AuthenticationInterceptor } from './authentication/authentication.inter
 /** Custom Strategies */
 import { RouteReusableStrategy } from './route/route-reusable-strategy';
 
-/** Custom Modules */
-import { MifosxLibModule } from '../mifosx-lib.module';
-
 /** Custom Components */
 import { ShellComponent } from './shell/shell.component';
 import { SidenavComponent } from './shell/sidenav/sidenav.component';
 import { ToolbarComponent } from './shell/toolbar/toolbar.component';
+import { FooterComponent } from './shell/footer/footer.component';
 import { BreadcrumbComponent } from './shell/breadcrumb/breadcrumb.component';
 import { ContentComponent } from './shell/content/content.component';
+import { MaterialModule } from '@mifosx-lib/material.module';
+import { CommonModule } from '@angular/common';
+import { LanguageSelectorComponent } from './shell/language-selector/language-selector.component';
+import { ThemeToggleComponent } from './shell/theme-toggle/theme-toggle.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { SearchToolComponent } from './shell/search-tool/search-tool.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 /**
@@ -43,23 +48,40 @@ import { ContentComponent } from './shell/content/content.component';
  */
 @NgModule({
   imports: [
-    MifosxLibModule,
     HttpClientModule,
     TranslateModule,
-    RouterModule
+    RouterModule,
+    CommonModule,
+    MaterialModule,
+    FontAwesomeModule,
+    ReactiveFormsModule
   ],
   declarations: [
     ShellComponent,
     SidenavComponent,
     ToolbarComponent,
     BreadcrumbComponent,
-    ContentComponent
+    ContentComponent,
+    FooterComponent,
+    LanguageSelectorComponent,
+    ThemeToggleComponent,
+    SearchToolComponent
   ],
   exports: [
-    MifosxLibModule // TO BE REMOVED: Once all components have replaced the core module import by shared module.
+    CommonModule,
+    MaterialModule,
+    FontAwesomeModule,
+    FooterComponent,
+    LanguageSelectorComponent,
+    ThemeToggleComponent,
+    SearchToolComponent
   ],
 
   providers: [
+    {
+      provide: HttpClient,
+      useClass: HttpService
+    },
     AuthenticationService,
     AuthenticationGuard,
     AuthenticationInterceptor,
@@ -72,10 +94,6 @@ import { ContentComponent } from './shell/content/content.component';
     ApiPrefixInterceptor,
     ErrorHandlerInterceptor,
     CacheInterceptor,
-    {
-      provide: HttpClient,
-      useClass: HttpService
-    },
     ProgressBarService,
     {
       provide: HTTP_INTERCEPTORS,

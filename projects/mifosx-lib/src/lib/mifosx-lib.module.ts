@@ -1,8 +1,7 @@
 /** Angular Imports */
-import { NgModule, Pipe } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { MifosxLibComponent } from './mifosx-lib.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -23,14 +22,11 @@ import { EntityNameComponent } from './entity-name/entity-name.component';
 import { ExternalIdentifierComponent } from './external-identifier/external-identifier.component';
 import { FileUploadComponent } from './file-upload/file-upload.component';
 import { KeyboardShortcutsDialogComponent } from './keyboard-shortcuts-dialog/keyboard-shortcuts-dialog.component';
-import { LanguageSelectorComponent } from './language-selector/language-selector.component';
-import { SearchToolComponent } from './search-tool/search-tool.component';
 import { ServerSelectorComponent } from './server-selector/server-selector.component';
 import { StepperButtonsComponent } from './steppers/stepper-buttons/stepper-buttons.component';
 import { SvgIconComponent } from './svg-icon/svg-icon.component';
 import { TenantSelectorComponent } from './tenant-selector/tenant-selector.component';
 import { ThemePickerComponent } from './theme-picker/theme-picker.component';
-import { ThemeToggleComponent } from './theme-toggle/theme-toggle.component';
 import { TransactionPaymentDetailComponent } from './transaction-payment-detail/transaction-payment-detail.component';
 import { NotificationsTrayComponent } from './notifications-tray/notifications-tray.component';
 import { FormfieldComponent } from './form-dialog/formfield/formfield.component';
@@ -53,13 +49,13 @@ import {
   NgxMatNativeDateModule,
   NgxMatTimepickerModule,
 } from '@angular-material-components/datetime-picker';
-import { FooterComponent } from './footer/footer.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { RevertTransactionComponent } from './accounting/revert-transaction/revert-transaction.component';
 import { ViewJournalEntryTransactionComponent } from './accounting/view-journal-entry-transaction/view-journal-entry-transaction.component';
+import { CoreModule } from './core/core.module';
 
 
 @NgModule({
@@ -79,9 +75,9 @@ import { ViewJournalEntryTransactionComponent } from './accounting/view-journal-
     MatInputModule,
     MatSelectModule,
     MatDatepickerModule,
+    CoreModule
   ],
   declarations: [
-    MifosxLibComponent,
     AccountNumberComponent,
     GlAccountDisplayComponent,
     RevertTransactionComponent,
@@ -100,21 +96,17 @@ import { ViewJournalEntryTransactionComponent } from './accounting/view-journal-
     ExternalIdentifierComponent,
     FileUploadComponent,
     KeyboardShortcutsDialogComponent,
-    LanguageSelectorComponent,
-    SearchToolComponent,
     ServerSelectorComponent,
     StepperButtonsComponent,
     SvgIconComponent,
     TenantSelectorComponent,
     ThemePickerComponent,
-    ThemeToggleComponent,
     TransactionPaymentDetailComponent,
     NotificationsTrayComponent,
     FileUploadComponent,
     FormfieldComponent,
     FormDialogComponent,
     ViewJournalEntryComponent,
-    FooterComponent,
     DatatableMultiRowComponent,
     DatatableSingleRowComponent,
     EntityDatatableTabComponent,
@@ -124,7 +116,6 @@ import { ViewJournalEntryTransactionComponent } from './accounting/view-journal-
     MifosxLongTextComponent
   ],
   exports: [
-    MifosxLibComponent,
     AccountNumberComponent,
     GlAccountDisplayComponent,
     ExternalIdentifierComponent,
@@ -132,7 +123,6 @@ import { ViewJournalEntryTransactionComponent } from './accounting/view-journal-
     ViewJournalEntryComponent,
     ViewSavingsAccountingDetailsComponent,
     IconsModule,
-    SearchToolComponent,
     RevertTransactionComponent,
     ViewJournalEntryTransactionComponent,
     PipesModule,
@@ -142,24 +132,21 @@ import { ViewJournalEntryTransactionComponent } from './accounting/view-journal-
     ReactiveFormsModule,
     FormsModule,
     ThemePickerComponent,
-    ThemeToggleComponent,
     TransactionPaymentDetailComponent,
     NotificationsTrayComponent,
     FileUploadComponent,
     FormDialogComponent,
     ViewJournalEntryComponent,
-    FooterComponent,
     EntityDatatableTabComponent,
     EntityNotesTabComponent,
     UploadDocumentDialogComponent,
     EntityDocumentsTabComponent,
     StepperButtonsComponent,
     DatatableMultiRowComponent,
-    LanguageSelectorComponent,
     TenantSelectorComponent,
     ServerSelectorComponent,
     MifosxLongTextComponent,
-    EntityNameComponent
+    EntityNameComponent,
   ],
   schemas: [],
 })

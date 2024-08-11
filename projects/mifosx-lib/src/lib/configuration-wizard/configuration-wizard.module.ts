@@ -15,10 +15,9 @@ import { ConfigurationWizardComponent } from './configuration-wizard.component';
 import { ContinueSetupDialogComponent } from './continue-setup-dialog/continue-setup-dialog.component';
 import { NextStepDialogComponent } from './next-step-dialog/next-step-dialog.component';
 import { CompletionDialogComponent } from './completion-dialog/completion-dialog.component';
+import { TranslateModule } from '@ngx-translate/core';
+import { MaterialModule } from '@mifosx-lib/material.module';
 
-/** Custom Modules */
-import { MifosxLibModule } from '@mifosx-lib/mifosx-lib.module';
-// import { TranslateService } from '@ngx-translate/core';
 
 /**
  * Configuration Wizard Module
@@ -34,11 +33,12 @@ import { MifosxLibModule } from '@mifosx-lib/mifosx-lib.module';
         CompletionDialogComponent
     ],
     imports: [
-        MifosxLibModule,
         CommonModule,
         OverlayModule,
         PortalModule,
-        MatDialogModule
+        MatDialogModule,
+        MaterialModule,
+        TranslateModule
     ],
     exports: [
         PopoverCloseDirective

@@ -1,10 +1,10 @@
 /** Angular Imports */
 import { Component, OnInit } from '@angular/core';
 import { UntypedFormControl } from '@angular/forms';
+import { SettingsService } from '@mifosx-lib/settings/settings.service';
 
 /** Custom Services */
 import { TranslateService } from '@ngx-translate/core';
-import { SettingsService } from '../settings/settings.service';
 
 /**
  * Language selector component.
